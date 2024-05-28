@@ -8,7 +8,7 @@ function dd($value){
 
 // dd($_SERVER);
 
-$url = parse_url($_SERVER['REQUEST_URI'])['path'];
+// $url = parse_url($_SERVER['REQUEST_URI'])['path'];
 // dd($url);
 
 // if ($url == "/dilgent-tecnogies-internee/laracast/") {
@@ -21,24 +21,29 @@ $url = parse_url($_SERVER['REQUEST_URI'])['path'];
 //     require 'controller/contact.php';
 // }
 
-$routes=[
-    '/dilgent-tecnogies-internee/laracast/'=>'controller/index.php',
-    '/dilgent-tecnogies-internee/laracast/about'=>'./controller/about.php',
-    '/dilgent-tecnogies-internee/laracast/contact'=>'controller/contact.php'
-];
-function abort($code=404){
-    http_response_code($code);
-    require "views/{$code}.php";
-}
-function RoutetoController($url,$routes){
-    if (array_key_exists($url,$routes)) {
-        require $routes[$url];
-    }
-    else{
-      abort();
-    }
-}
-RoutetoController($url,$routes)
+
+// $routes=[
+//     '/dilgent-tecnogies-internee/laracast/'=>'controller/index.php',
+//     '/dilgent-tecnogies-internee/laracast/about'=>'./controller/about.php',
+//     '/dilgent-tecnogies-internee/laracast/contact'=>'controller/contact.php',
+//     '/dilgent-tecnogies-internee/laracast/notes'=>'controller/notes.php',
+//     '/dilgent-tecnogies-internee/laracast/note'=>'controller/note.php'
+// ];
+
+// $routes=require('routes.php');
+// function abort($code=404){
+//     http_response_code($code);
+//     require "views/{$code}.php";
+// }
+// function RoutetoController($url,$routes){
+//     if (array_key_exists($url,$routes)) {
+//         require $routes[$url];
+//     }
+//     else{
+//       abort();
+//     }
+// }
+// RoutetoController($url,$routes)
 ?>
 
 <?php
