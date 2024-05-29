@@ -1,15 +1,14 @@
-<?php require_once 'database.php'; ?>
-<?php
-// dd($_SERVER);
-$heading='note';
-require './views/notes/show.view.php';
+<?php require_once 'database.php'; 
 
-if ($_SERVER['REQUEST_METHOD']=='POST') {
-    dd($_POST);
-    $note= $_POST['id'];
-    $query = "DELETE FROM `laracasts note app` WHERE id=$id"; // Correct 
+?>
+<?php
+
+$id=$_POST['id'];
+
+// var_dump($note);
+    $query = "DELETE FROM `laracasts note app` WHERE user_id=1 AND id=$id"; // Correct 
     $stmt = $database->executeQuery($query);
 
-}
-header('location: /notes');
+
+header('location: /dilgent-tecnogies-internee/laracast/notes');
 exit();

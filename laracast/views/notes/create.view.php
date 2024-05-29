@@ -4,7 +4,7 @@
 
 <main>
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-        <form action="#" class="max-w-md mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" method="POST">
+        <form action="/dilgent-tecnogies-internee/laracast/notes" class="max-w-md mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" method="POST">
             <div class="mb-4" method="POST">
                 <label for="note" class="block text-gray-700 text-sm font-bold mb-2">Description</label>
                 <textarea name="note" id="note" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>

@@ -1,4 +1,5 @@
 <?php
+// $ ['name'] = 'Abdullah';
 // echo ($_SERVER['REQUEST_URI']);
-$heading='Home';
+$heading = 'Home';
 require './views/index.vu.php';

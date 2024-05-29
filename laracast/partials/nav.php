@@ -9,10 +9,10 @@
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <a href="./" class=" <?php echo ($_SERVER['REQUEST_URI'] == '/dilgent-tecnogies-internee/laracast/') ? 'bg-gray-900 text-white' : 'text-gray-300'; ?> rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</a>
-              <a href="./about" class="<?php echo ($_SERVER['REQUEST_URI'] == '/dilgent-tecnogies-internee/laracast/about') ? 'bg-gray-900 text-white' : 'text-gray-300'; ?> text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">about</a>
-              <a href="./notes" class="<?php echo ($_SERVER['REQUEST_URI'] == '/dilgent-tecnogies-internee/laracast/notes') ? 'bg-gray-900 text-white' : 'text-gray-300'; ?> text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">notes</a>
-              <a href="./contact" class="<?php echo ($_SERVER['REQUEST_URI'] == '/dilgent-tecnogies-internee/laracast/contact') ? 'bg-gray-900 text-white' : 'text-gray-300'; ?> text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">contact</a>
+              <a href="/dilgent-tecnogies-internee/laracast/" class="<?php echo ($_SERVER['REQUEST_URI'] == '/dilgent-tecnogies-internee/laracast/') ? 'bg-gray-900 text-white' : 'text-gray-300'; ?> rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</a>
+            <a href="/dilgent-tecnogies-internee/laracast/about" class="<?php echo ($_SERVER['REQUEST_URI'] == '/dilgent-tecnogies-internee/laracast/about') ? 'bg-gray-900 text-white' : 'text-gray-300'; ?> hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About</a>
+            <a href="/dilgent-tecnogies-internee/laracast/notes" class="<?php echo ($_SERVER['REQUEST_URI'] == '/dilgent-tecnogies-internee/laracast/notes') ? 'bg-gray-900 text-white' : 'text-gray-300'; ?> hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Notes</a>
+            <a href="/dilgent-tecnogies-internee/laracast/contact" class="<?php echo ($_SERVER['REQUEST_URI'] == '/dilgent-tecnogies-internee/laracast/contact') ? 'bg-gray-900 text-white' : 'text-gray-300'; ?> hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact</a>
             </div>
           </div>
         </div>
@@ -32,8 +32,13 @@
                 <button type="button" class="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
                   <span class="absolute -inset-1.5"></span>
                   <span class="sr-only">Open user menu</span>
+                  <?php if($_SESSION['user'] ?? false): ?>
                   <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                  <?php else:  ?>
+                    
                 </button>
+                <a href="/dilgent-tecnogies-internee/laracast/register">Register</a>
+                    <?php endif; ?>
               </div>
 
               <!--

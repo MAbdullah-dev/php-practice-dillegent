@@ -22,10 +22,10 @@
         ?>
 
                 <!-- Delete Note Form -->
-                <form method="POST">
+                <form method="post">
                     <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
                     <input type="hidden" name="_method" value="DELETE">
-                    <button class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50">
+                    <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50">
                         Delete Note
                     </button>
                 </form>
@@ -39,6 +39,9 @@
 
         <a href="./notes" class="inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
             Go Back
+        </a>
+        <a href="./note/edit?id=<?php echo $row['id']; ?>" class="inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+           EDIT
         </a>
     </div>
 </main>

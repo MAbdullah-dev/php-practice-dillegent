@@ -19,6 +19,20 @@ $routers->get('/dilgent-tecnogies-internee/laracast/notes','controller/notes/not
 
 $routers->get('/dilgent-tecnogies-internee/laracast/note','controller/notes/note.php');
 
-$routers->get('/dilgent-tecnogies-internee/laracast/create/note','./controller/notes/create.php');
+$routers->patch('/dilgent-tecnogies-internee/laracast/note','controller/notes/update.php');
 
-$routers->delete('/dilgent-tecnogies-internee/laracast/create/note','./controller/notes/destroy.php');
+$routers->get('/dilgent-tecnogies-internee/laracast/note/edit','controller/notes/edit.php');
+
+$routers->delete('/dilgent-tecnogies-internee/laracast/note', 'controller/notes/destroy.php');
+
+$routers->get('/dilgent-tecnogies-internee/laracast/create/note','controller/notes/create.php');
+
+$routers->post('/dilgent-tecnogies-internee/laracast/notes','controller/notes/store.php');
+
+$routers->post('/dilgent-tecnogies-internee/laracast/notes','controller/notes/store.php');
+
+$routers->get('/dilgent-tecnogies-internee/laracast/register','controller/registration/create.php');
+
+$routers->post('/dilgent-tecnogies-internee/laracast/register','controller/registration/store.php');
+
+
