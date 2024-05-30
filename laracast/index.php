@@ -1,15 +1,6 @@
 <?php
 session_start();
-// function dd($value){
-    //     echo "<pre>";
-//     var_dump($value);
-//     echo "</pre>";
-//     die();
-// }   
-//  require "./router.php";
-// require_once 'path/to/Routers.php';
-// $routers = new Routers(); 
-// $url = parse_url($_SERVER['REQUEST_URI'])['path'];
+
 require_once './router/Router.php';
 
 use \router\Routers;

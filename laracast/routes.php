@@ -15,7 +15,7 @@ $routers->get('/dilgent-tecnogies-internee/laracast/about','./controller/about.p
 
 $routers->get('/dilgent-tecnogies-internee/laracast/contact','controller/contact.php');
 
-$routers->get('/dilgent-tecnogies-internee/laracast/notes','controller/notes/notes.php');
+$routers->get('/dilgent-tecnogies-internee/laracast/notes','controller/notes/notes.php')->only('auth');
 
 $routers->get('/dilgent-tecnogies-internee/laracast/note','controller/notes/note.php');
 
@@ -29,10 +29,14 @@ $routers->get('/dilgent-tecnogies-internee/laracast/create/note','controller/not
 
 $routers->post('/dilgent-tecnogies-internee/laracast/notes','controller/notes/store.php');
 
-$routers->post('/dilgent-tecnogies-internee/laracast/notes','controller/notes/store.php');
-
-$routers->get('/dilgent-tecnogies-internee/laracast/register','controller/registration/create.php');
+// $routers->post('/dilgent-tecnogies-internee/laracast/notes','controller/notes/store.php');
+    
+$routers->get('/dilgent-tecnogies-internee/laracast/register','controller/registration/create.php')->only('guest');
 
 $routers->post('/dilgent-tecnogies-internee/laracast/register','controller/registration/store.php');
+
+$routers->get('/dilgent-tecnogies-internee/laracast/login','controller/session/create.php')->only('guest');
+
+$routers->post('/dilgent-tecnogies-internee/laracast/session','controller/session/store.php')->only('guest');
 
 
