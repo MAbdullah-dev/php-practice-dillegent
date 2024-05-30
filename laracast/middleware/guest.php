@@ -1,12 +1,12 @@
 <?php
-
 class Guest
 {
-    public function Guest()
+    public function handle()
     {
-        if (    $_SESSION['user'] ?? false) {
-            header("location: /dilgent-tecnogies-internee/laracast");
+        if ($_SESSION['user'] ?? false) {
+            header("Location: /dilgent-tecnogies-internee/laracast");
             exit;
-        }   
+        }
     }
 }
+?>

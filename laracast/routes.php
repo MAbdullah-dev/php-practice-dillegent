@@ -33,10 +33,12 @@ $routers->post('/dilgent-tecnogies-internee/laracast/notes','controller/notes/st
     
 $routers->get('/dilgent-tecnogies-internee/laracast/register','controller/registration/create.php')->only('guest');
 
-$routers->post('/dilgent-tecnogies-internee/laracast/register','controller/registration/store.php');
+$routers->post('/dilgent-tecnogies-internee/laracast/register','controller/registration/store.php')->only('guest');
 
 $routers->get('/dilgent-tecnogies-internee/laracast/login','controller/session/create.php')->only('guest');
 
 $routers->post('/dilgent-tecnogies-internee/laracast/session','controller/session/store.php')->only('guest');
+
+$routers->delete('/dilgent-tecnogies-internee/laracast/session','controller/session/destroy.php')->only('auth');
 
 
