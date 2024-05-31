@@ -1,26 +1,30 @@
 <?php
 require_once 'database.php';
 require_once 'validator.php';
+require_once './forms/loginform.php';
+
 
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-$errors = [];
+$form =new loginform();
+$form->Validate();
+// $errors = [];
 
-// Validate email
-if (!validator::email($email)) {
-    $errors['email'] = 'Please provide a valid email.';
-}
+// // Validate email
+// if (!validator::email($email)) {
+//     $errors['email'] = 'Please provide a valid email.';
+// }
 
-// Validate password length
-if (!validator::string($password, 7, 255)) {
-    $errors['password'] = 'Please provide a valid password.';
-}
+// // Validate password length
+// if (!validator::string($password, 7, 255)) {
+//     $errors['password'] = 'Please provide a valid password.';
+// }
 
-// If there are validation errors, return to the login view
-if (!empty($errors)) {
-    return require_once './views/session/create.view.php';
-}
+// // If there are validation errors, return to the login view
+// if (!empty($errors)) {
+//     return require_once './views/session/create.view.php';
+// }
 
 try {
     // Use prepared statements to prevent SQL injection
@@ -53,5 +57,5 @@ try {
     // Handle potential exceptions, such as database connection issues
     error_log($e->getMessage());
     $errors['general'] = 'An error occurred. Please try again later.';
-    return require_once './views/session/create.view.php';
+    
 }

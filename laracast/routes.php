@@ -39,6 +39,6 @@ $routers->get('/dilgent-tecnogies-internee/laracast/login','controller/session/c
 
 $routers->post('/dilgent-tecnogies-internee/laracast/session','controller/session/store.php')->only('guest');
 
-$routers->delete('/dilgent-tecnogies-internee/laracast/session','controller/session/destroy.php')->only('auth');
+$routers->delete('/dilgent-tecnogies-internee/laracast/session','controller/session/destroy.php');
 
 
